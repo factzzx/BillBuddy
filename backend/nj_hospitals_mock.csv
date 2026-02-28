@@ -1,0 +1,16 @@
+hospital_name,hospital_code,city,procedure_code,procedure_name,avg_price_usd,insurance_accepted,rating
+Hackensack University Medical Center,NJH001,Hackensack,PROC1001,Chest X-Ray,450,Aetna|Cigna|UnitedHealth,4.5
+Morristown Medical Center,NJH002,Morristown,PROC1001,Chest X-Ray,480,Aetna|Horizon BCBS|Cigna,4.6
+Robert Wood Johnson University Hospital,NJH003,New Brunswick,PROC1001,Chest X-Ray,430,Horizon BCBS|UnitedHealth|Medicaid,4.4
+Newark Beth Israel Medical Center,NJH004,Newark,PROC1001,Chest X-Ray,460,Cigna|Aetna|Medicare,4.2
+Jersey Shore University Medical Center,NJH005,Neptune,PROC1002,MRI Brain,3200,Horizon BCBS|Aetna,4.7
+Hackensack University Medical Center,NJH001,Hackensack,PROC1002,MRI Brain,3100,Aetna|Cigna|UnitedHealth,4.6
+Morristown Medical Center,NJH002,Morristown,PROC1002,MRI Brain,3300,Aetna|Horizon BCBS|Cigna,4.8
+Robert Wood Johnson University Hospital,NJH003,New Brunswick,PROC1003,CT Scan Abdomen,2800,Horizon BCBS|UnitedHealth|Medicaid,4.5
+Newark Beth Israel Medical Center,NJH004,Newark,PROC1003,CT Scan Abdomen,2950,Cigna|Aetna|Medicare,4.1
+Jersey Shore University Medical Center,NJH005,Neptune,PROC1003,CT Scan Abdomen,2700,Horizon BCBS|Aetna,4.3
+Hackensack University Medical Center,NJH001,Hackensack,PROC1004,Blood Panel,350,Aetna|Cigna|UnitedHealth,4.4
+Morristown Medical Center,NJH002,Morristown,PROC1004,Blood Panel,320,Aetna|Horizon BCBS|Cigna,4.3
+Robert Wood Johnson University Hospital,NJH003,New Brunswick,PROC1005,Ultrasound,900,Horizon BCBS|UnitedHealth|Medicaid,4.5
+Newark Beth Israel Medical Center,NJH004,Newark,PROC1005,Ultrasound,850,Cigna|Aetna|Medicare,4.0
+Jersey Shore University Medical Center,NJH005,Neptune,PROC1005,Ultrasound,880,Horizon BCBS|Aetna,4.2

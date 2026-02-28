@@ -1,4 +1,7 @@
-.venv/
+venv/
 __pycache__/
-uploads/
 *.pyc
+uploads/
+backend/static/
+sample_bill.png
+test_upload.py
