@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BillBuddy – Understand & negotiate your medical bills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">BillBuddy</h1>
+      <p class="tagline">Understand and negotiate your medical bills</p>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section class="upload-section">
+        <form id="upload-form" class="upload-form">
+          <div id="drop-zone" class="drop-zone">
+            <input type="file" id="file-input" name="file" accept="image/*,.pdf" hidden />
+            <p class="drop-zone-text">Drop your bill here or <span class="browse">browse</span></p>
+            <p class="drop-zone-hint">Image or PDF</p>
+            <p id="file-name" class="file-name" aria-live="polite"></p>
+          </div>
+          <button type="submit" id="submit-btn" class="btn btn-primary" disabled>Analyze bill</button>
+        </form>
+      </section>
+
+      <div id="loading" class="loading" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Reading your bill and comparing to NJ hospital data…</p>
+      </div>
+
+      <div id="error" class="error-card" hidden>
+        <p id="error-message" class="error-message"></p>
+      </div>
+
+      <div id="results" class="results" hidden>
+        <section class="card card-bill">
+          <h2>Your bill</h2>
+          <dl class="bill-dl">
+            <dt>Hospital</dt>
+            <dd id="result-hospital"></dd>
+            <dt>Procedure</dt>
+            <dd id="result-procedure"></dd>
+            <dt>Amount</dt>
+            <dd id="result-amount" class="amount"></dd>
+            <dt>Insurance</dt>
+            <dd id="result-insurance"></dd>
+          </dl>
+        </section>
+
+        <section class="card card-comparison">
+          <h2>Comparison</h2>
+          <div id="comparison-badge" class="badge"></div>
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <span class="label">Your price</span>
+              <span id="result-user-price" class="value"></span>
+            </div>
+            <div class="comparison-item">
+              <span class="label">NJ average</span>
+              <span id="result-avg-price" class="value"></span>
+            </div>
+            <div id="savings-wrap" class="comparison-item" hidden>
+              <span class="label">Possible savings</span>
+              <span id="result-savings" class="value savings"></span>
+            </div>
+          </div>
+          <div id="ml-prediction-wrap" class="ml-prediction" hidden>
+            <span class="label">Expected price (model)</span>
+            <span id="result-predicted-price" class="value"></span>
+          </div>
+          <ul id="result-notes" class="notes-list"></ul>
+        </section>
+
+        <section id="negotiation-section" class="card card-negotiation" hidden>
+          <h2>How you can negotiate this bill</h2>
+          <ul id="negotiation-tips" class="tips-list"></ul>
+          <button type="button" id="read-aloud-btn" class="btn btn-secondary">Read results aloud</button>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

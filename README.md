@@ -61,6 +61,6 @@ Visiting that URL in your browser should return:
 ```
 
 ### 5. Open the frontend
-Open `frontend/index.html` in your browser. No extra server needed — just double-click the file.
+Open **http://127.0.0.1:5000/** in your browser. The backend serves the frontend; do not open `frontend/index.html` directly (that can cause "Failed to fetch").
 
 ---

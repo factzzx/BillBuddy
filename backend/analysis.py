@@ -2,6 +2,8 @@ import os
 from typing import Dict, Any, List
 
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # Path to CSV in the same backend folder
