@@ -6,7 +6,7 @@ from flask_cors import CORS
 from ocr import extract_text
 from utils import parse_bill_text
 from analysis import analyze_bill
-from model import load_model_if_ready, predict_price
+from model import load_model_if_ready, predict_price, get_dataset_mean_rating, get_hospital_rating
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -80,7 +80,7 @@ def upload_bill():
                 price_model,
                 le_proc,
                 parsed_data.get("procedure", "Unknown"),
-                rating=4.3,
+                rating=20,
             )
         except Exception:
             predicted_price = None
@@ -98,4 +98,4 @@ def upload_bill():
     return jsonify(response)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)

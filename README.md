@@ -63,4 +63,7 @@ Visiting that URL in your browser should return:
 ### 5. Open the frontend
 Open **http://127.0.0.1:5000/** in your browser. The backend serves the frontend; do not open `frontend/index.html` directly (that can cause "Failed to fetch").
 
+### 6. Live demo
+See **[DEMO_SCRIPT.md](DEMO_SCRIPT.md)** for a step-by-step script and a helper to generate a demo bill image (`python scripts/generate_demo_bill_image.py`).
+
 ---
